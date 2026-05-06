@@ -37,7 +37,7 @@ PLUGINS=(
 
 # ====================== LANGUAGE TRANSLATIONS ======================
 if [[ "$LANGUAGE" == "ru" ]]; then
-    MSG_TITLE="=== FM-DX Webserver + Plugins Installer v0.9.1 ==="
+    MSG_TITLE="=== FM-DX Webserver + Plugins Installer ${VERSION} ==="
     MSG_MAIN_CHECK="🔄 Проверка основного проекта..."
     MSG_MAIN_UPDATED="   ✅ Основной проект обновлён"
     MSG_MAIN_UPTODATE="   ✓ Основной проект уже актуален"
@@ -57,11 +57,11 @@ if [[ "$LANGUAGE" == "ru" ]]; then
     MSG_RESTART="🔄 Были обновления → Перезапускаем FM-DX Webserver..."
     MSG_RESTART_OK="✅ Сервис перезапущен"
     MSG_RESTART_FAIL="⚠️ Ошибка запуска сервиса"
-    MSG_ALL_DONE="✓ Всё уже актуально"
+    MSG_ALL_DONE="✓ Все файлы актуальны"
     MSG_FINAL="🎉 Готово!"
 
 elif [[ "$LANGUAGE" == "fr" ]]; then
-    MSG_TITLE="=== FM-DX Webserver + Plugins Installer v0.9.1 ==="
+    MSG_TITLE="=== FM-DX Webserver + Plugins Installer ${VERSION} ==="
     MSG_MAIN_CHECK="🔄 Vérification du projet principal..."
     MSG_MAIN_UPDATED="   ✅ Projet principal mis à jour"
     MSG_MAIN_UPTODATE="   ✓ Projet principal à jour"
@@ -85,7 +85,7 @@ elif [[ "$LANGUAGE" == "fr" ]]; then
     MSG_FINAL="🎉 Terminé!"
 
 elif [[ "$LANGUAGE" == "de" ]]; then
-    MSG_TITLE="=== FM-DX Webserver + Plugins Installer v0.9.1 ==="
+    MSG_TITLE="=== FM-DX Webserver + Plugins Installer ${VERSION} ==="
     MSG_MAIN_CHECK="🔄 Überprüfung des Hauptprojekts..."
     MSG_MAIN_UPDATED="   ✅ Hauptprojekt aktualisiert"
     MSG_MAIN_UPTODATE="   ✓ Hauptprojekt ist aktuell"
@@ -110,7 +110,7 @@ elif [[ "$LANGUAGE" == "de" ]]; then
 
 else
     # English (default)
-    MSG_TITLE="=== FM-DX Webserver + Plugins Installer v0.9.1 ==="
+    MSG_TITLE="=== FM-DX Webserver + Plugins Installer ${VERSION} ==="
     MSG_MAIN_CHECK="🔄 Checking main project..."
     MSG_MAIN_UPDATED="   ✅ Main project updated"
     MSG_MAIN_UPTODATE="   ✓ Main project is up to date"
@@ -168,8 +168,8 @@ else
 fi
 
 # ====================== Install/update plugins repositories ======================
-mkdir -p "$SRC_ROOT" "$DST_ROOT"
 echo -e "\n$MSG_PLUGINS_SECTION"
+mkdir -p "$SRC_ROOT" "$DST_ROOT"
 
 for url in "${PLUGINS[@]}"; do
     repo_dir="${url##*/}"
