@@ -135,10 +135,7 @@ else
 fi
 
 # ====================== INIT ======================
-mkdir -p "$SRC_ROOT" "$DST_ROOT"
-
 any_update=false
-
 echo "$MSG_TITLE"
 
 # ====================== Install/update fm-dx-webserver repository ======================
@@ -171,6 +168,7 @@ else
 fi
 
 # ====================== Install/update plugins repositories ======================
+mkdir -p "$SRC_ROOT" "$DST_ROOT"
 echo -e "\n$MSG_PLUGINS_SECTION"
 
 for url in "${PLUGINS[@]}"; do

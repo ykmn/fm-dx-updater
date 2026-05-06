@@ -14,12 +14,11 @@ If you have no **fm-dx-webserver** installed on your Linux system, please make s
 ```bash
 sudo apt install -y ffmpeg nodejs npm
 cd ~
-mkdir -p ~/fm-dx-webserver  # project installation folder
 wget https://github.com/ykmn/fm-dx-updater/raw/refs/heads/main/fmdx-update.sh
 sudo chmod +x ~/fmdx-updater.sh
 ```
 
-Run script `~/fmdx-updater.sh`. It will install **fm-dx-webserver** if it was not found in ~/fm-dx-webserver, and install plugins. You may get `systemctl restart` error after initial installation, because you have to create and enable service file `/etc/systemd/system/fm-dx-webserver.service` after installation by yourself according to manual:
+Run script `~/fmdx-updater.sh`. It will install **fm-dx-webserver** to ~/fm-dx-webserver folder and install plugins. You may get `systemctl restart` error after initial installation, because you have to create and enable service file `/etc/systemd/system/fm-dx-webserver.service` after installation by yourself according to manual:
 
 ```bash
 [Unit]
