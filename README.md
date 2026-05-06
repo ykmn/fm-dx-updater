@@ -13,6 +13,7 @@ If you have no **fm-dx-webserver** installed on your Linux system, please make s
 
 ```bash
 sudo apt install -y ffmpeg nodejs npm
+cd ~
 mkdir -p ~/fm-dx-webserver  # project installation folder
 wget https://github.com/ykmn/fm-dx-updater/raw/refs/heads/main/fmdx-update.sh
 sudo chmod +x ~/fmdx-updater.sh
